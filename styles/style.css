@@ -562,6 +562,35 @@ nav a:hover {
     max-width: 566px;
     min-width: 278px;
     object-fit: cover;
+    transition: 0.5s;
+}
+
+.social-gallery a {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-gallery a::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+
+    width: 70px;
+    height: 70px;
+
+    background: url("../images/social/play.svg") center;
+    background-size: cover;
+
+    transition: 0.5s;
+}
+
+.social-gallery a:hover img {
+    transform: scale(1.2);
+}
+
+.social-gallery a:hover::after {
+    transform: scale(1.5);
 }
 
 
